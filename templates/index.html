@@ -1,0 +1,39 @@
+{% extends "layout.html" %}
+
+{% block content %}
+
+<!-- <div class="form-input">
+        <form action="/" method="GET" id='form-new-board'>
+            <button type="submit" id="create-board">New board</button>
+            <input type="text" name="new-board-title" id="input" value="Board">
+        </form>
+    </div> -->
+
+<div class="form-input">
+    <form action="/" method="GET" id='form-new-board'>
+        <button type="submit" id="create-board"> New board </button>
+        <input type="text" name='new-board-title' id="input" placeholder="Enter name" required>
+    </form>
+</div>
+
+<div class="popup-wrapper">
+    <form action="/" method="POST">
+        <div>
+            <label for="title"><b>New name</b></label>
+            <input type="text" name="title" id="title" required>
+        </div>
+        <div>
+            <button type="submit">Save</button>
+        </div>
+    </form>
+</div>
+
+
+<div class="board-container">
+
+</div>
+
+
+<script type="module" src="{{ url_for('static', filename='js/main.js') }}"></script>
+
+{% endblock %}

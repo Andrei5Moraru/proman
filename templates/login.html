@@ -1,0 +1,58 @@
+{% extends "layout.html" %}
+
+{% block content %}
+
+
+        <!-- <form action="/login" class="add_question" method="POST">
+            <div class="form-inner">
+                <div class="registration-form">
+                    <h1>Login</h1>
+                    <br>
+                   <p>Please fill in this form to login.</p>
+                   <br>
+    
+                   <p><label for="email"><b>Email</b></label></p>
+                   <p><input type="text" placeholder="Enter Email" name="email" id="email" required></p>
+    
+                  <p> <label for="psw"><b>Password</b></label></p>
+                  <p> <input type="password" placeholder="Enter Password" name="password" id="psw" required></p>
+    
+    
+                </div>
+    
+    
+    
+                   <button type="submit" class="registerbtn">Login</button></p>
+    
+    
+    
+            </div>
+    
+    
+        </form> -->
+
+
+        <div class="register-form">
+            <form action="/login" class="registration" method="POST">
+                <div class="input-group">
+                    <label for="email"><b>Username</b></label>
+                    <input class="input--style-3" type="text" placeholder="Enter Username" name="email" id="email" required>
+                </div>
+                <div class="input-group">
+                    <label for="psw"><b>Password</b></label>
+                    <input class="input--style-3" type="password" placeholder="Enter Password" name="password" id="psw" required>
+                </div>
+               
+                <div class="submitBtn">
+                    <button class="registerbtn" type="submit">Login</button>
+                </div>
+             <div class="container signin">
+                    <p>If you don't have an account <a href="{{url_for('register')}}">Register</a></p>
+            </div>
+                
+            </form>
+
+
+        </div>
+
+{% endblock %}
